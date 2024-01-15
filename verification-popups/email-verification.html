@@ -15,27 +15,32 @@
 	<div class="wrapper">
 		<div class="verification">
 			<div class="verification__inner">
-				<form action="#" class="verification-block email-verification">
-					<button type="button" class="email-verification__close">
-						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-							<path d="M23 23L9 9" stroke="#152521" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-							<path d="M23 9L9 23" stroke="#152521" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
-					</button>
-					<div class="email-verification__title">Email Verification</div>
-					<div class="email-verification__subtitle">We've sent a code to olivia@untitledui.com</div>
-					<div class="email-verification__form verification-form">
-						<input autocomplete="off" type="number" name="value" placeholder="0">
-						<input autocomplete="off" type="number" name="value" placeholder="0">
-						<input autocomplete="off" type="number" name="value" placeholder="0">
-						<span>-</span>
-						<input autocomplete="off" type="number" name="value" placeholder="0">
-						<input autocomplete="off" type="number" name="value" placeholder="0">
-						<input autocomplete="off" type="number" name="value" placeholder="0">
-					</div>
-					<button type="button" class="email-verification__submit">Verify Account</button>
-					<div class="email-verification__time">Didn't get a code? Resend in <span>00:30</span></div>
-				</form>
+				<button data-popup="#email-verification" type="button">OPEN POPUP</button>
+				<div id="email-verification" aria-hidden="true" class="popup">
+					<div class="popup__wrapper">
+						<form action="#" class="popup__content verification-block email-verification">
+							<button data-close type="button" class="email-verification__close">
+								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+									<path d="M23 23L9 9" stroke="#152521" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M23 9L9 23" stroke="#152521" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+							<div class="email-verification__title">Email Verification</div>
+							<div class="email-verification__subtitle">We've sent a code to olivia@untitledui.com</div>
+							<div class="email-verification__form verification-form">
+								<input autocomplete="off" type="number" name="value" placeholder="0">
+								<input autocomplete="off" type="number" name="value" placeholder="0">
+								<input autocomplete="off" type="number" name="value" placeholder="0">
+								<span>-</span>
+								<input autocomplete="off" type="number" name="value" placeholder="0">
+								<input autocomplete="off" type="number" name="value" placeholder="0">
+								<input autocomplete="off" type="number" name="value" placeholder="0">
+							</div>
+							<button type="button" class="email-verification__submit">Verify Account</button>
+							<div class="email-verification__time">Didn't get a code? Resend in <span>00:30</span></div>
+						</form>
+					</div>	
+				</div>
 			</div>
 		</div>
 	</div>

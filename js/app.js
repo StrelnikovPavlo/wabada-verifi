@@ -2398,10 +2398,12 @@
                 input.addEventListener('input', function () {
                     var value = this.value.trim();
 
-                    if (value.length === 1) {
-                        if (index < inputs.length - 1) {
-                            inputs[index + 1].focus();
-                        }
+                    if (value.length > 1) {
+                        this.value = value.slice(0, 1);
+                    }
+
+                    if (index < inputs.length - 1) {
+                        inputs[index + 1].focus();
                     }
                 });
 
@@ -2415,12 +2417,14 @@
         });
 
 
+
         const copyBlock = document.querySelectorAll('[data-copy]');
 
         for (let i = 0; i < copyBlock.length; i++) {
             const copy = copyBlock[i];
             const copyText = copy.querySelector('[data-copy-text]');
             const copyButton = copy.querySelector('[data-copy-button]');
+            const copyMessage = copy.querySelector('[data-copy-message]');
 
             copyButton.addEventListener('click', function () {
                 const range = document.createRange();
@@ -2430,7 +2434,11 @@
                 selection.addRange(range);
                 document.execCommand("copy");
                 selection.removeAllRanges();
-                alert(copyText.textContent);
+
+                copyMessage.classList.add('_show');
+                setTimeout(() => {
+                    copyMessage.classList.remove('_show');
+                }, 2000);
             });
         }
 

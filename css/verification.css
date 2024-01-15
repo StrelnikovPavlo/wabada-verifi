@@ -32,6 +32,7 @@
    margin: 0 auto;
 }
 .email-verification {
+   transition: all 0.3s ease 0s;
 }
 .email-verification__close {
    position: absolute;
@@ -297,7 +298,27 @@
       -moz-column-gap: 7px;
            column-gap: 7px;
 }
-.deposit-details__copy {
+.deposit-details__copy{
+   position: relative;
+}
+.deposit-details__copy span {
+   position: absolute;
+   top: 0;
+   right: 0;
+   transform: translateY(-100%);
+   background-color: rgb(0, 0, 0);
+   padding: 5px;
+   font-size: 10px;
+   border-radius: 5px;
+   color: #fff;
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.3s ease 0s;
+}
+.deposit-details__copy span._show{
+   opacity: 1;
+   visibility: visible;
+   transform: translateY(-120%);
 }
 .deposit-details__link {
 }
