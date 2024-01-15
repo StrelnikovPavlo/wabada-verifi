@@ -506,3 +506,11 @@
       margin-bottom: 16px;
    }
 }
+
+input::placeholder {
+  transition: opacity 0.3s;
+}
+
+input:focus::placeholder {
+  opacity: 0;
+}
