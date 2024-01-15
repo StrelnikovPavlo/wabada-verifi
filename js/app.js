@@ -2402,7 +2402,11 @@
                         this.value = value.slice(0, 1);
                     }
 
-                    if (index < inputs.length - 1) {
+                    if (value.length === 0 && index > 0) {
+                        inputs[index - 1].focus();
+                    }
+
+                    if (index < inputs.length - 1 && value.length === 1) {
                         inputs[index + 1].focus();
                     }
                 });
@@ -2415,6 +2419,7 @@
                 });
             });
         });
+
 
 
 

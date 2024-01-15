@@ -15,66 +15,79 @@
    <div class="wrapper">
       <div class="verification">
          <div class="verification__inner">
-            <form action="#" class="verification-block withdrawal-confirmation">
-               <div class="withdrawal-confirmation__title">Withdrawal Confirmation</div>
-               <div class="withdrawal-confirmation__info">
-                  <div class="withdrawal-confirmation__row">
-                     <div class="withdrawal-confirmation__label">Payment Method:</div>
-                     <div class="withdrawal-confirmation__value">Bank Transfer(SWIFT)</div>
-                  </div>
-                  <div class="withdrawal-confirmation__row">
-                     <div class="withdrawal-confirmation__label">Beneficiary Name:</div>
-                     <div class="withdrawal-confirmation__value">User name 1</div>
-                  </div>
-                  <div class="withdrawal-confirmation__row">
-                     <div class="withdrawal-confirmation__label">Bank Name:</div>
-                     <div class="withdrawal-confirmation__value">Bank name 1</div>
-                  </div>
-                  <div class="withdrawal-confirmation__row">
-                     <div class="withdrawal-confirmation__label">SWIFT/BIC Code:</div>
-                     <div class="withdrawal-confirmation__value">3292822882</div>
-                  </div>
-                  <div class="withdrawal-confirmation__row">
-                     <div class="withdrawal-confirmation__label">Beneficiary Account Number:</div>
-                     <div class="withdrawal-confirmation__value">Fr425hhgg2</div>
-                  </div>
-                  <div class="withdrawal-confirmation__row">
-                     <div class="withdrawal-confirmation__label">Beneficiary Address::</div>
-                     <div class="withdrawal-confirmation__value">335266d</div>
-                  </div>
+            <button data-popup="#withdrawal-confirmation" type="button">OPEN POPUP</button>
+				<div id="withdrawal-confirmation" aria-hidden="true" class="popup">
+					<div class="popup__wrapper">
+                  <form action="#" class="popup__content verification-block withdrawal-confirmation">
+                     <div class="deposit-details__head">
+                        <div class="deposit-details__title">Withdrawal Confirmation</div>
+                        <button data-close type="button" class="deposit-details__close">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path d="M17.25 17.25L6.75 6.75" stroke="#152521" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M17.25 6.75L6.75 17.25" stroke="#152521" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                           </svg>
+                        </button>
+                     </div>
+                     <div class="withdrawal-confirmation__info">
+                        <div class="withdrawal-confirmation__row">
+                           <div class="withdrawal-confirmation__label">Payment Method:</div>
+                           <div class="withdrawal-confirmation__value">Bank Transfer(SWIFT)</div>
+                        </div>
+                        <div class="withdrawal-confirmation__row">
+                           <div class="withdrawal-confirmation__label">Beneficiary Name:</div>
+                           <div class="withdrawal-confirmation__value">User name 1</div>
+                        </div>
+                        <div class="withdrawal-confirmation__row">
+                           <div class="withdrawal-confirmation__label">Bank Name:</div>
+                           <div class="withdrawal-confirmation__value">Bank name 1</div>
+                        </div>
+                        <div class="withdrawal-confirmation__row">
+                           <div class="withdrawal-confirmation__label">SWIFT/BIC Code:</div>
+                           <div class="withdrawal-confirmation__value">3292822882</div>
+                        </div>
+                        <div class="withdrawal-confirmation__row">
+                           <div class="withdrawal-confirmation__label">Beneficiary Account Number:</div>
+                           <div class="withdrawal-confirmation__value">Fr425hhgg2</div>
+                        </div>
+                        <div class="withdrawal-confirmation__row">
+                           <div class="withdrawal-confirmation__label">Beneficiary Address::</div>
+                           <div class="withdrawal-confirmation__value">335266d</div>
+                        </div>
+                     </div>
+                     <div class="withdrawal-confirmation__verifi">
+                        <div class="withdrawal-confirmation__email">Verification code from E-mail abcd@gmail.com</div>
+                        <div class="verification-form email-verification__form withdrawal-confirmation__cod">
+                           <input autocomplete="off" type="number" name="value" placeholder="0">
+                           <input autocomplete="off" type="number" name="value" placeholder="0">
+                           <input autocomplete="off" type="number" name="value" placeholder="0">
+                           <span>-</span>
+                           <input autocomplete="off" type="number" name="value" placeholder="0">
+                           <input autocomplete="off" type="number" name="value" placeholder="0">
+                           <input autocomplete="off" type="number" name="value" placeholder="0">
+                        </div>
+                        <div class="withdrawal-confirmation__time">Didn’t get a code? Resend in <span>00:30</span></div>
+                     </div>
+                     <div class="withdrawal-confirmation__amount">
+                        <div class="withdrawal-confirmation__label">Amount:</div>
+                        <div class="withdrawal-confirmation__value">4340.00 BUSD</div>
+                     </div>
+                     <div class="withdrawal-confirmation__info">
+                        <div class="withdrawal-confirmation__row">
+                           <div class="withdrawal-confirmation__label">Transaction Fee:</div>
+                           <div class="withdrawal-confirmation__value">0.00 BUSD</div>
+                        </div>
+                        <div class="withdrawal-confirmation__row">
+                           <div class="withdrawal-confirmation__label">You Will Get:</div>
+                           <div class="withdrawal-confirmation__sum">30.00 USD</div>
+                        </div>
+                     </div>
+                     <div class="withdrawal-confirmation__actions">
+                        <button type="button" class="withdrawal-confirmation__cancel">Cancel</button>
+                        <button type="button" class="withdrawal-confirmation__confirm">Confirm</button>
+                     </div>
+                  </form>
                </div>
-               <div class="withdrawal-confirmation__verifi">
-                  <div class="withdrawal-confirmation__email">Verification code from E-mail abcd@gmail.com</div>
-                  <div class="verification-form email-verification__form withdrawal-confirmation__cod">
-                     <input autocomplete="off" type="number" name="value" placeholder="0">
-                     <input autocomplete="off" type="number" name="value" placeholder="0">
-                     <input autocomplete="off" type="number" name="value" placeholder="0">
-                     <span>-</span>
-                     <input autocomplete="off" type="number" name="value" placeholder="0">
-                     <input autocomplete="off" type="number" name="value" placeholder="0">
-                     <input autocomplete="off" type="number" name="value" placeholder="0">
-                  </div>
-                  <div class="withdrawal-confirmation__time">Didn’t get a code? Resend in <span>00:30</span></div>
-               </div>
-               <div class="withdrawal-confirmation__amount">
-                  <div class="withdrawal-confirmation__label">Amount:</div>
-                  <div class="withdrawal-confirmation__value">4340.00 BUSD</div>
-               </div>
-               <div class="withdrawal-confirmation__info">
-                  <div class="withdrawal-confirmation__row">
-                     <div class="withdrawal-confirmation__label">Transaction Fee:</div>
-                     <div class="withdrawal-confirmation__value">0.00 BUSD</div>
-                  </div>
-                  <div class="withdrawal-confirmation__row">
-                     <div class="withdrawal-confirmation__label">You Will Get:</div>
-                     <div class="withdrawal-confirmation__sum">30.00 USD</div>
-                  </div>
-               </div>
-               <div class="withdrawal-confirmation__actions">
-                  <button type="button" class="withdrawal-confirmation__cancel">Cancel</button>
-                  <button type="button" class="withdrawal-confirmation__confirm">Confirm</button>
-               </div>
-            </form>
+            </div>
          </div>
       </div>
    </div>
